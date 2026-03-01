@@ -7,7 +7,6 @@
 
 <meta name="description" content="Deepak Cosmetic Store is a curated beauty recommendation platform guiding customers to purchase directly from official brand websites through transparent affiliate links.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -17,37 +16,90 @@ font-family:'Montserrat',sans-serif;
 background:#f8f6f2;
 color:#333;
 line-height:1.6;
+scroll-behavior:smooth;
 }
 
-header{
+.site-header{
+position:sticky;
+top:0;
 background:#ffffff;
-padding:30px 20px;
-text-align:center;
 border-bottom:1px solid #e5e5e5;
+z-index:1000;
+padding:8px 20px;
 }
 
-header img{
-width:180px;
-height:auto;
-display:block;
+.header-inner{
+display:flex;
+align-items:center;
+justify-content:space-between;
+max-width:1100px;
 margin:auto;
 }
 
-.tagline{
-margin-top:10px;
-font-size:14px;
+.brand{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.brand img{
+width:45px;
+height:45px;
+object-fit:contain;
+}
+
+.brand-text{
+display:flex;
+flex-direction:column;
+}
+
+.brand-name{
+font-size:16px;
+font-weight:600;
+color:#7a1c1c;
+}
+
+.brand-tagline{
+font-size:11px;
 color:#777;
 }
 
-nav{
-margin-top:20px;
+.main-nav{
+display:flex;
+gap:18px;
 }
 
-nav a{
-margin:0 12px;
+.main-nav a{
 text-decoration:none;
-color:#555;
+color:#444;
 font-size:14px;
+}
+
+.menu-toggle{
+display:none;
+font-size:24px;
+cursor:pointer;
+}
+
+@media (max-width:768px){
+.main-nav{
+position:absolute;
+top:60px;
+right:20px;
+background:#fff;
+flex-direction:column;
+padding:15px;
+border:1px solid #e5e5e5;
+display:none;
+}
+
+.main-nav a{
+padding:6px 0;
+}
+
+.menu-toggle{
+display:block;
+}
 }
 
 .hero{
@@ -57,7 +109,7 @@ background:#ffffff;
 }
 
 .hero h1{
-font-size:28px;
+font-size:26px;
 margin-bottom:15px;
 }
 
@@ -95,49 +147,13 @@ margin:auto;
 
 .section h2{
 text-align:center;
-margin-bottom:40px;
+margin-bottom:30px;
 }
 
 .products{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:30px;
-}
-
-.card{
-background:#ffffff;
-padding:20px;
-border:1px solid #e5e5e5;
-text-align:center;
-}
-
-.card img{
-max-width:100%;
-height:auto;
-margin-bottom:15px;
-}
-
-.card h3{
-font-size:16px;
-margin-bottom:10px;
-}
-
-.card ul{
-padding-left:18px;
-text-align:left;
-font-size:13px;
-color:#555;
-}
-
-.affiliate-btn{
-display:inline-block;
-margin-top:15px;
-padding:10px 20px;
-background:#7a1c1c;
-color:#fff;
-text-decoration:none;
-font-size:13px;
-border-radius:4px;
 }
 
 .guide{
@@ -160,23 +176,35 @@ text-decoration:none;
 margin:0 8px;
 }
 </style>
-
 </head>
+
 <body>
 
-<header>
-<img src="images/dcs-logo.png" alt="Deepak Cosmetic Store Logo">
-<div class="tagline">Your Trusted Beauty Recommendation Platform</div>
-<nav>
-<a href="#">Home</a>
-<a href="#top-picks">Top Picks</a>
-<a href="#skincare">Skincare</a>
-<a href="#haircare">Haircare</a>
-<a href="#about">About</a>
-<a href="#disclosure">Disclosure</a>
-<a href="#privacy">Privacy</a>
-<a href="#contact">Contact</a>
-</nav>
+<header class="site-header">
+  <div class="header-inner">
+
+    <div class="brand">
+      <img src="images/dcs-logo.png" alt="Deepak Cosmetic Store Logo">
+      <div class="brand-text">
+        <div class="brand-name">Deepak Cosmetic Store</div>
+        <div class="brand-tagline">Your Trusted Beauty Recommendation Platform</div>
+      </div>
+    </div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#">Home</a>
+      <a href="#top-picks">Top Picks</a>
+      <a href="#skincare">Skincare</a>
+      <a href="#haircare">Haircare</a>
+      <a href="#about">About</a>
+      <a href="#disclosure">Disclosure</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+  </div>
 </header>
 
 <section class="hero">
@@ -194,140 +222,90 @@ margin:0 8px;
 <section class="section" id="top-picks">
 <h2>🔥 Editor’s Top Picks</h2>
 <div class="products">
-
-<div class="card">
-<img src="images/product1.jpg" alt="Lotus Vitamin C Serum">
-<h3>Lotus Botanicals Vitamin C Serum</h3>
-<ul>
-<li>Brightens dull skin</li>
-<li>Reduces dark spots</li>
-<li>Lightweight daily formula</li>
-</ul>
-<a href="YOUR-AFFILIATE-LINK-HERE"
-target="_blank"
-rel="nofollow sponsored"
-class="affiliate-btn">
-Check Latest Price
-</a>
-</div>
-
-<div class="card">
-<img src="images/product2.jpg" alt="Lotus SPF Sunscreen">
-<h3>Lotus Botanicals SPF 50 Sunscreen</h3>
-<ul>
-<li>Broad spectrum protection</li>
-<li>Non-greasy texture</li>
-<li>Suitable for daily wear</li>
-</ul>
-<a href="YOUR-AFFILIATE-LINK-HERE"
-target="_blank"
-rel="nofollow sponsored"
-class="affiliate-btn">
-Check Latest Price
-</a>
-</div>
-
+<!-- Products will be loaded later -->
 </div>
 </section>
 
 <section class="section" id="skincare">
 <h2>🌿 Skincare Recommendations</h2>
 <p style="text-align:center;max-width:700px;margin:auto;">
-We recommend skincare products designed for brightening, hydration and protection.
-Always choose products suitable for your skin type and purchase directly from official brand websites.
+Explore brightening, hydration and protection solutions tailored for different skin types.
 </p>
-
 <div class="products">
-<!-- Product cards will be added here later -->
 </div>
-  </section>
+</section>
 
-  <section class="section" id="haircare">
+<section class="section" id="haircare">
 <h2>💆 Haircare Recommendations</h2>
 <p style="text-align:center;max-width:700px;margin:auto;">
-Healthy hair begins with proper nourishment and scalp care.
-Explore trusted haircare solutions from official brand websites.
+Healthy hair begins with proper nourishment and scalp care from trusted brands.
 </p>
-
 <div class="products">
-<!-- Haircare products later -->
 </div>
-  </section>
-
-  <section class="section guide">
-<h2>How To Choose The Right Skincare Products</h2>
-<p>
-Understanding your skin type is the first step toward effective skincare.
-Dry, oily, combination and sensitive skin require different formulations.
-Always check ingredients such as Vitamin C, Niacinamide or Hyaluronic Acid
-based on your concerns.
-Buy directly from official brand websites to ensure authenticity.
-Perform a patch test before using new products.
-Consistency and proper routine matter more than frequent product changes.
-Reading verified reviews can help in better decision-making.
-</p>
-  </section>
+</section>
 
 <section class="section guide">
 <h2>How To Choose The Right Skincare Products</h2>
 <p>
-Understanding your skin type is the first step toward choosing effective skincare.
-Always check ingredient lists and avoid harsh chemicals that may cause irritation.
-Look for products suited to your concerns such as acne, pigmentation or dryness.
-Buying directly from official brand websites ensures authenticity.
-Perform a patch test before applying new products.
-Consistency is key in skincare routines.
-Reading verified customer reviews can also help make informed decisions.
+Understanding your skin type is the first step toward effective skincare.
+Check ingredients carefully and always buy from official brand websites.
+Perform a patch test before using new products.
+Consistency in skincare routines delivers better long-term results.
 </p>
 </section>
 
 <section class="section" id="about">
 <h2>About Deepak Cosmetic Store</h2>
 <p>
-Deepak Cosmetic Store has served customers locally for years. Through this platform,
-we share carefully selected beauty recommendations so customers can shop directly from official brand websites with confidence.
-We do not sell products directly. When purchases are made through affiliate links,
-we may earn a small commission at no additional cost to you.
+Deepak Cosmetic Store has served customers locally for years.
+Through this platform, we share carefully selected beauty recommendations so customers can shop directly from official brand websites with confidence.
+We do not sell products directly. Purchases made through affiliate links may earn us a small commission at no additional cost to you.
 </p>
 </section>
 
 <section class="section" id="disclosure">
 <h2>Affiliate Disclosure</h2>
 <p>
-This website contains affiliate links. If you purchase through these links,
-we may earn a small commission at no additional cost to you.
-Our recommendations are based on product research and customer demand.
+This website contains affiliate links. If you purchase through these links, we may earn a commission at no additional cost to you.
 </p>
 </section>
 
 <section class="section" id="privacy">
 <h2>Privacy Policy</h2>
 <p>
-Deepak Cosmetic Store does not sell products directly and does not collect payment information.
-This website may use affiliate tracking links and cookies to monitor purchases
-made through referral links.
-No personal customer data is stored or processed on this website.
-By using this site, you agree to our affiliate and privacy practices.
+This website does not sell products directly and does not collect payment information.
+Affiliate tracking links may use cookies to monitor purchases.
+No personal customer data is stored or processed.
 </p>
 </section>
 
 <section class="section" id="contact">
 <h2>Contact</h2>
 <p style="text-align:center;">
-For business inquiries or collaborations, please contact us at:
-<br><br>
-<strong>deepakcosmeticstore@gmail.com</strong>
+For business inquiries: <br><br>
+<strong>your@email.com</strong>
 </p>
 </section>
 
-<footer id="contact">
+<footer>
 <p>© 2026 Deepak Cosmetic Store</p>
 <p>
 <a href="#about">About</a> |
 <a href="#disclosure">Disclosure</a> |
-<a href="#">Privacy Policy</a>
+<a href="#privacy">Privacy</a>
 </p>
 </footer>
 
+<script>
+function toggleMenu(){
+var nav = document.getElementById("mainNav");
+if(nav.style.display === "flex"){
+nav.style.display = "none";
+} else {
+nav.style.display = "flex";
+}
+}
+</script>
+
 </body>
-  </html>
+</html>
