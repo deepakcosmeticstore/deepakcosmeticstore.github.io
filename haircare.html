@@ -3,12 +3,129 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Haircare Recommendations | Deepak Cosmetic Store</title>
+
+<meta name="description" content="Explore haircare recommendations including shampoos, conditioners, hair oils and hair masks from trusted beauty brands.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://deepakcosmeticstore.com/haircare.html">
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
+<style>
 
+body{
+margin:0;
+font-family:'Montserrat',sans-serif;
+background:#f8f6f2;
+color:#333;
+line-height:1.6;
+scroll-behavior:smooth;
+}
+
+.site-header{
+position:sticky;
+top:0;
+background:#ffffff;
+border-bottom:1px solid #e5e5e5;
+z-index:1000;
+padding:8px 20px;
+}
+
+.header-inner{
+display:flex;
+align-items:center;
+justify-content:space-between;
+max-width:1100px;
+margin:auto;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.brand img{
+width:45px;
+height:45px;
+object-fit:contain;
+}
+
+.brand-text{
+display:flex;
+flex-direction:column;
+}
+
+.brand-name{
+font-size:16px;
+font-weight:600;
+color:#7a1c1c;
+}
+
+.brand-tagline{
+font-size:11px;
+color:#777;
+}
+
+.main-nav{
+display:flex;
+gap:18px;
+}
+
+.main-nav a{
+text-decoration:none;
+color:#444;
+font-size:14px;
+}
+
+.section{
+padding:60px 20px;
+max-width:1000px;
+margin:auto;
+}
+
+.section h2{
+text-align:center;
+margin-bottom:30px;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.product-card{
+background:#fff;
+padding:18px;
+border-radius:8px;
+border:1px solid #e5e5e5;
+transition:0.3s;
+}
+
+.product-card:hover{
+transform:translateY(-4px);
+box-shadow:0 8px 18px rgba(0,0,0,0.08);
+}
+
+footer{
+background:#111;
+color:#ccc;
+padding:40px 20px;
+text-align:center;
+font-size:13px;
+}
+
+footer a{
+color:#ccc;
+text-decoration:none;
+margin:0 8px;
+}
+
+</style>
 </head>
 
 <body>
@@ -17,14 +134,16 @@
 <div class="header-inner">
 
 <div class="brand">
-<img src="images/dcs-logo.png">
+<img src="images/dcs-logo.png" alt="Deepak Cosmetic Store Logo">
 <div class="brand-text">
 <div class="brand-name">Deepak Cosmetic Store</div>
+<div class="brand-tagline">Your Trusted Beauty Recommendation Platform</div>
 </div>
 </div>
 
 <nav class="main-nav">
 <a href="index.html">Home</a>
+<a href="index.html#top-picks">Top Picks</a>
 <a href="skincare.html">Skincare</a>
 <a href="haircare.html">Haircare</a>
 </nav>
@@ -32,13 +151,155 @@
 </div>
 </header>
 
+
 <section class="section">
 
-<h1>Haircare Recommendations</h1>
+<h1 style="text-align:center;">Haircare Recommendations</h1>
 
-<p>Explore carefully selected skincare products including cleansers, serums, moisturisers and sunscreens.</p>
+<p style="text-align:center;max-width:700px;margin:0 auto;color:#666;">
+Healthy hair begins with proper care and nourishment. Explore our curated haircare recommendations including shampoos, conditioners, hair oils, serums and hair masks.
+</p>
 
 </section>
+
+
+<section class="section">
+
+<h2 style="text-align:center;">Jump To</h2>
+
+<div class="products">
+
+<div class="product-card">
+<h3>Shampoo</h3>
+<a href="#shampoo">View Section</a>
+</div>
+
+<div class="product-card">
+<h3>Conditioner</h3>
+<a href="#conditioner">View Section</a>
+</div>
+
+<div class="product-card">
+<h3>Hair Oil</h3>
+<a href="#hairoil">View Section</a>
+</div>
+
+<div class="product-card">
+<h3>Hair Serum</h3>
+<a href="#hairserum">View Section</a>
+</div>
+
+<div class="product-card">
+<h3>Hair Mask</h3>
+<a href="#hairmask">View Section</a>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section" id="shampoo">
+
+<h2>Shampoo Recommendations</h2>
+
+<p>
+Choosing the right shampoo helps cleanse the scalp, remove buildup and maintain healthy hair.
+Different shampoos target concerns such as dandruff, hair fall and dryness.
+</p>
+
+<div class="products">
+
+<!-- Paste shampoo product cards here -->
+
+</div>
+
+</section>
+
+
+<section class="section" id="conditioner">
+
+<h2>Conditioner Recommendations</h2>
+
+<p>
+Conditioners help restore moisture, smooth hair strands and improve manageability.
+They are essential for maintaining soft and healthy looking hair.
+</p>
+
+<div class="products">
+
+<!-- Paste conditioner product cards here -->
+
+</div>
+
+</section>
+
+
+<section class="section" id="hairoil">
+
+<h2>Hair Oil Recommendations</h2>
+
+<p>
+Hair oils nourish the scalp, strengthen roots and help reduce hair breakage when used regularly.
+Traditional oils like onion oil and herbal blends are widely used for scalp health.
+</p>
+
+<div class="products">
+
+<!-- Paste hair oil products here -->
+
+</div>
+
+</section>
+
+
+<section class="section" id="hairserum">
+
+<h2>Hair Serum Recommendations</h2>
+
+<p>
+Hair serums help reduce frizz, add shine and protect hair from environmental damage.
+They are typically applied after washing to improve smoothness and manageability.
+</p>
+
+<div class="products">
+
+<!-- Paste serum products here -->
+
+</div>
+
+</section>
+
+
+<section class="section" id="hairmask">
+
+<h2>Hair Mask Recommendations</h2>
+
+<p>
+Hair masks provide deep nourishment and repair for dry or damaged hair.
+Weekly treatments help improve hair strength and overall texture.
+</p>
+
+<div class="products">
+
+<!-- Paste hair mask products here -->
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 Deepak Cosmetic Store</p>
+
+<p>
+<a href="index.html#about">About</a> |
+<a href="index.html#disclosure">Disclosure</a> |
+<a href="index.html#privacy">Privacy</a>
+</p>
+
+</footer>
 
 </body>
 </html>
