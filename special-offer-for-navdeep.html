@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0,
+                 maximum-scale=1.0, user-scalable=no">
+
+  <title>Latest Offer</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      overflow: hidden;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .prank-screen {
+      position: relative;
+      width: 100%;
+      height: 100dvh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #000;
+    }
+
+    .broken-phone {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .reveal {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      padding: 0 20px 55px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease;
+    }
+
+    .reveal.show {
+      opacity: 1;
+    }
+
+    .joke-box {
+      max-width: 360px;
+      width: 100%;
+      padding: 18px 20px;
+      border-radius: 16px;
+      background: rgba(0, 0, 0, 0.88);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #fff;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+    }
+
+    .joke-box .emoji {
+      font-size: 34px;
+      margin-bottom: 5px;
+    }
+
+    .joke-box h2 {
+      margin: 0 0 7px;
+      font-size: 24px;
+    }
+
+    .joke-box p {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.45;
+      color: #ddd;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="prank-screen">
+
+    <img
+      src="broken-phone.png"
+      alt="System error"
+      class="broken-phone"
+    >
+
+    <div class="reveal" id="reveal">
+      <div class="joke-box">
+        <div class="emoji">😂</div>
+
+        <h2>GOT YOU!</h2>
+
+        <p>
+          Relax bro — your phone is perfectly fine. 😜<br><br>
+          Maybe think twice before sending me
+          another useless ranking link!
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    setTimeout(function () {
+      document.getElementById("reveal").classList.add("show");
+    }, 3500);
+  </script>
+
+</body>
+</html>
